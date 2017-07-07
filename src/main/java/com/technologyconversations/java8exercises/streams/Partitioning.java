@@ -19,7 +19,8 @@ public class Partitioning {
     }
 
     public static Map<Boolean, List<Person>> partitionAdults(List<Person> people) {
-        return null;
+        return people.stream()
+        		.collect(partitioningBy(x -> x.getAge() >= 18));
     }
 
 }

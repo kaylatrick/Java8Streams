@@ -19,7 +19,9 @@ public class Kids {
 
     public static Set<String> getKidNames(List<Person> people) {
         return people.stream()
-        		.filter(x -> x.getAge()<18).map(Person::getName);
+        		.filter(x -> x.getAge()<18)
+        		.map(Person::getName)
+        		.collect(Collectors.toSet());
     }
 
 }
